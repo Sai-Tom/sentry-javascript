@@ -385,7 +385,9 @@ describe('withSentryConfig', () => {
         expect(consoleWarnSpy).toHaveBeenCalledWith(
           expect.stringContaining('[@sentry/nextjs] DEPRECATION WARNING: disableLogger is deprecated'),
         );
-        expect(consoleWarnSpy).toHaveBeenCalledWith(expect.stringContaining('Use webpack.treeshake.debugLogs instead'));
+        expect(consoleWarnSpy).toHaveBeenCalledWith(
+          expect.stringContaining('Use webpack.treeshake.debugLogging instead'),
+        );
       });
 
       it('does not warn when using new webpack path', () => {
